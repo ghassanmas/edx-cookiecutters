@@ -43,6 +43,8 @@ jobs:
       # have names that are on a list of reseverd keywords and should not
       # be used.
       run: |
+        pip install --upgrade pip click
+        pip install pip-tools
         pip install -r requirements/base.txt
         cookiecutter --no-input cookiecutter-django-ida
         cd repo_name
